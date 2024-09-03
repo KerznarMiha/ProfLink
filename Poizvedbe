@@ -1,0 +1,20 @@
+USE ProfLink;
+INSERT INTO Professors (first_name, last_name, email, phone_number, hire_date)
+VALUES 
+('John', 'Doe', 'johndoe@example.com', '123-456-7890', '2023-09-01'),
+('Emily', 'Clark', 'emilyclark@example.com', '987-654-3210', '2022-08-15'),
+('Robert', 'Smith', 'robertsmith@example.com', '555-123-4567', '2021-07-10');
+INSERT INTO Courses (course_name, description, professor_id)
+VALUES 
+('Database Systems', 'Introduction to relational databases', 1),
+('Computer Networks', 'Basics of networking and data communication', 2),
+('Algorithms', 'Advanced study of algorithms and data structures', 3);
+INSERT INTO Students (first_name, last_name, email, phone_number, enrollment_date, course_id)
+VALUES 
+('Jane', 'Smith', 'janesmith@example.com', '987-654-3210', '2023-09-02', 1),
+('Michael', 'Brown', 'michaelbrown@example.com', '123-123-1234', '2023-09-03', 2),
+('Laura', 'Jones', 'laurajones@example.com', '456-789-0123', '2023-09-04', 3);
+INSERT INTO Admins (first_name, last_name, email, phone_number, role)
+VALUES 
+('Alice', 'Johnson', 'alicejohnson@example.com', '555-555-5555', 'System Admin'),
+('Mark', 'Wilson', 'markwilson@example.com', '444-444-4444', 'Course Coordinator');
