@@ -1,0 +1,39 @@
+CREATE DATABASE ProfLink;
+USE ProfLink;
+
+CREATE TABLE Professors (
+    professor_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_number VARCHAR(15),
+    hire_date DATE
+);
+
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY AUTO_INCREMENT,
+    course_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    professor_id INT,
+    FOREIGN KEY (professor_id) REFERENCES Professors(professor_id)
+);
+
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_number VARCHAR(15),
+    enrollment_date DATE,
+    course_id INT,
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);
+
+CREATE TABLE Admins (
+    admin_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_number VARCHAR(15),
+    role VARCHAR(50) NOT NULL
+);
