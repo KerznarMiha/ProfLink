@@ -14,7 +14,7 @@ body {
 .navbar.grey-bar {
     background-color: #E9EDEA; 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
     height: 60px; 
@@ -36,7 +36,10 @@ body {
 }
 
 nav {
-    margin-left: -100px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    z-index: 1;
 }
 
 nav ul {
@@ -47,7 +50,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 nav ul li a {
@@ -90,4 +93,12 @@ nav ul li a:hover {
     height: 60px;
     box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3);
     border-top: 3px solid #2c6d6a;
+}
+
+.school-description {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
 }
