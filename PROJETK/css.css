@@ -93,6 +93,24 @@ nav ul li a:hover {
     height: 60px;
     box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3);
     border-top: 3px solid #2c6d6a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #d1d1d1;
 }
 
 .school-description {
