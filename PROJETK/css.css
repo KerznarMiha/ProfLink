@@ -54,13 +54,35 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black; 
+    color: #387C7E;
     text-decoration: none;
     font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: white;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 .login-button a {
@@ -114,9 +136,126 @@ nav ul li a:hover {
 }
 
 .school-description {
-    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    text-align: center;
-    font-size: 16px;
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
     color: #333;
+}
+
+.left-box {
+    text-align: left;
+}
+
+.right-box {
+    text-align: right;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-image: url('ai.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 15% auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    width: 400px;
+    text-align: center;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #387C7E;
+}
+
+.modal-content h2, .modal-content label {
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-size: 24px;
+}
+
+.modal-content label {
+    display: inline-block;
+    text-align: left;
+    width: 100%; /* Adjust width as necessary */
+}
+
+.modal-content input {
+    width: calc(100% - 22px); /* Adjust for padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.close:hover,
+.close:focus {
+    color: #387C7E;
+}
+
+.modal-content button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button:hover {
+    background-color: #387C7E;
+}
+
+input[type="text"], input[type="password"] {
+    border: 2px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.modal-content a {
+    color: #387C7E;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #387C7E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content a:hover {
+    background-color: #387C7E;
+    color: white;
 }

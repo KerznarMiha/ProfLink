@@ -9,15 +9,15 @@
 </head>
 <body>
     <header>
-        <div class="blue-bar"></div> <!-- Blue bar -->
+        <div class="blue-bar"></div>
         
-        <div class="navbar grey-bar"> <!-- Grey bar -->
+        <div class="navbar grey-bar"> 
             <div class="logo"> 
                 <img src="Logo.png" alt="ProfLink Logo">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#Urnik">Urnik</a></li>
+                    <li><a href="file:///C:/Users/Dijak/Downloads/PROJETK/Urnik.html">Urnik</a></li>
                     <li><a href="#Nadomeščanja">Nadomeščanja</a></li>
                     <li><a href="#Naloge">Naloge</a></li>
                     <li><a href="#Obvestila">Obvestila</a></li>
@@ -25,15 +25,11 @@
                 </ul>
             </nav>
             <div class="login-button">
-                <a href="#login">Login</a>
+                <a href="#" id="login-btn">Prijava</a>
             </div>
         </div>
     </header>
-
-    <!-- Background image section -->
     <div class="background-section"></div>
-
-    <!-- Bottom blue bar with social media icons -->
     <div class="bottom-blue-bar">
         <div class="social-icons">
             <a href="https://www.facebook.com/share/dEFXnaNfAeaU3xZU/?mibextid=LQQJ4d" target="_blank" class="social-icon">
@@ -48,9 +44,48 @@
         </div>
     </div>
         
-    <!-- School description -->
     <div class="school-description">
-        <p>Šolski center Celje - Šola za kemijo, elektrotehniko in računalništvo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu, a aliquam nulla. Nullam fermentum ligula id lacus varius, nec fermentum felis commodo. Integer ac erat et dolor faucibus malesuada. Sed vitae lorem vehicula, lacinia nunc sed, sodales turpis.</p>
+        <div class="box left-box">
+            <p>Na Srednji šoli za kemijo, elektrotehniko in računalništvo se zavedamo tega dejstva v kontekstu družbenih razmer. Z dolgoletno tradicijo skrbimo za uspešen kader v gospodarstvu, predvsem pa spodbujamo dijake k nadaljnjemu strokovnemu sodelovanju ter izpopolnjevanju, s čimer prispevamo k njihovi osebnostni rasti, kar se posledično odraža tudi v širši družbi.
+                Zgodovina Šolskega centra Celje sega v leto 1959, izobraževanje na področju kemije poteka na šoli od leta 1976, na področju elektrotehnike od leta 1978, zadnji program s področja računalništva je bil vpeljan leta 2002.</p>
+        </div>
+        <div class="box right-box">
+            <p>Dijakom nudimo kvalitetno izobraževanje, pomagamo jim prebroditi težave odraščanja tako, da postanejo dobri delavci in uspešni strokovnjaki. Nekateri med njimi dosegajo visoka priznanja na tekmovanjih različnih strokovnih področij – v državni in mednarodni konkurenci. Aktivno se vključujemo v mednarodne projekte, kar jim omogoča izvajanje interaktivnih dejavnosti, premislek o različnih evropskih temah, njihovo delo ter misli pa se slišijo v evropski prostor.</p>
+        </div>
+
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Prijava</h2>
+                <form>
+                    <label for="username">Uporabniško ime:</label>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="password">Geslo:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <button type="submit">Potrdi</button>
+                </form>
+                <p>Še nimate računa? <a href="#" id="registerLink">Registrirajte se tukaj</a></p>
+            </div>
+        </div>
+
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Registracija</h2>
+                <label for="reg-username">Uporabniško ime:</label>
+                <input type="text" id="reg-username" placeholder="Vnesite vaše uporabniško ime">
+                <label for="email">E-naslov:</label>
+                <input type="text" id="email" placeholder="Vnesite vaš e-naslov">
+                <label for="reg-password">Geslo:</label>
+                <input type="password" id="reg-password" placeholder="Vnesite vaše geslo">
+                <button id="registerSubmit">Registriraj se</button>
+                <p>Že imate račun? <a href="#" id="loginLink">Prijavite se tukaj</a></p>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+
+    <script src="Script.js"></script>
+    </body>
+    </html>
+
+        
