@@ -259,3 +259,57 @@ input[type="text"], input[type="password"] {
     background-color: #387C7E;
     color: white;
 }
+
+.schedule-section {
+    padding: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #387C7E;
+    color: white;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.schedule-table tr:hover {
+    background-color: #ddd;
+}
+
+.bottom-blue-bar {
+    background-color: #387C7E;
+    height: 60px;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid #2c6d6a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #d1d1d1;
+}

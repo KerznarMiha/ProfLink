@@ -30,10 +30,7 @@
         </div>
     </header>
 
-    <div class="background-section"></div>
-
-    <div class="school-description">
-        <h2>Class Schedule</h2>
+    <div class="schedule-section">
         <table class="schedule-table">
             <thead>
                 <tr>
@@ -125,6 +122,36 @@
             <a href="https://www.youtube.com/@scceljessker" target="_blank" class="social-icon">
                 <i class="fab fa-youtube"></i>
             </a>
+        </div>
+    </div>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Prijava</h2>
+            <form>
+                <label for="username">Uporabniško ime:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Geslo:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit">Potrdi</button>
+            </form>
+            <p>Še nimate računa? <a href="#" id="registerLink">Registrirajte se tukaj</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registracija</h2>
+            <label for="reg-username">Uporabniško ime:</label>
+            <input type="text" id="reg-username" placeholder="Vnesite vaše uporabniško ime">
+            <label for="email">E-naslov:</label>
+            <input type="text" id="email" placeholder="Vnesite vaš e-naslov">
+            <label for="reg-password">Geslo:</label>
+            <input type="password" id="reg-password" placeholder="Vnesite vaše geslo">
+            <button id="registerSubmit">Registriraj se</button>
+            <p>Že imate račun? <a href="#" id="loginLink">Prijavite se tukaj</a></p>
         </div>
     </div>
 
