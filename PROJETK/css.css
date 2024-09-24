@@ -313,3 +313,32 @@ input[type="text"], input[type="password"] {
 .social-icon:hover {
     color: #d1d1d1;
 }
+
+.absence-section {
+    padding: 20px;
+}
+
+.absence-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.absence-table th, .absence-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.absence-table th {
+    background-color: #387C7E;
+    color: white;
+}
+
+.absence-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.absence-table tr:hover {
+    background-color: #ddd;
+}
