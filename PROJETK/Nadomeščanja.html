@@ -19,6 +19,7 @@
                 <ul>
                     <li><a href="file:///C:/Users/Dijak/Downloads/PROJETK/Naslovna%20stran.html?username=wewe&password=wewe#Urnik">Naslovna stran</a></li>
                     <li><a href="file:///C:/Users/Dijak/Downloads/PROJETK/Urnik.html">Urnik</a></li>
+                    <li><a href="file:///C:/Users/Dijak/Downloads/PROJETK/Nadome%C5%A1%C4%8Danja.html">Nadomeščanja</a></li>
                     <li><a href="#Naloge">Naloge</a></li>
                     <li><a href="#Obvestila">Obvestila</a></li>
                     <li><a href="#Slike">Slike</a></li>
@@ -31,42 +32,34 @@
     </header>
 
     <div class="absence-section">
-        <table class="absence-table">
+        <table class="absence-table" id="absence-table">
             <thead>
                 <tr>
                     <th>Manjkajoči učitelji</th>
                     <th>Nadomeščeni učitelji</th>
                     <th>Datum</th>
+                    <th>Akcije</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Mr. Novak</td>
-                    <td>Ms. Kovač</td>
-                    <td>September 25, 2024</td>
-                </tr>
-                <tr>
-                    <td>Ms. Horvat</td>
-                    <td>Mr. Jurić</td>
-                    <td>September 25, 2024</td>
-                </tr>
-                <tr>
-                    <td>Mr. Šimun</td>
-                    <td>Ms. Petrović</td>
-                    <td>September 26, 2024</td>
-                </tr>
-                <tr>
-                    <td>Ms. Milić</td>
-                    <td>Mr. Bačić</td>
-                    <td>September 26, 2024</td>
-                </tr>
-                <tr>
-                    <td>Mr. Cvjetko</td>
-                    <td>Ms. Savić</td>
-                    <td>September 27, 2024</td>
-                </tr>
+            <tbody id="absence-tbody">
+
             </tbody>
         </table>
+        <button id="add-absence">Dodaj Odsotnost</button>
+    </div>
+
+    <div id="absence-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Dodaj / Uredi Odsotnost</h2>
+            <label for="absent-teacher">Manjkajoči učitelj:</label>
+            <input type="text" id="absent-teacher"><br><br>
+            <label for="replacement-teacher">Nadomeščeni učitelj:</label>
+            <input type="text" id="replacement-teacher"><br><br>
+            <label for="absence-date">Datum:</label>
+            <input type="date" id="absence-date" min=""><br><br>
+            <button id="save-absence">Shrani</button>
+        </div>
     </div>
 
     <div class="bottom-blue-bar">
@@ -85,41 +78,40 @@
 
     <div class="school-description">
         <div class="box left-box">
-            <p>Na Srednji šoli za kemijo, elektrotehniko in računalništvo se zavedamo tega dejstva v kontekstu družbenih razmer. Z dolgoletno tradicijo skrbimo za uspešen kader v gospodarstvu, predvsem pa spodbujamo dijake k nadaljnjemu strokovnemu sodelovanju ter izpopolnjevanju, s čimer prispevamo k njihovi osebnostni rasti, kar se posledično odraža tudi v širši družbi.
-                Zgodovina Šolskega centra Celje sega v leto 1959, izobraževanje na področju kemije poteka na šoli od leta 1976, na področju elektrotehnike od leta 1978, zadnji program s področja računalništva je bil vpeljan leta 2002.</p>
+            <p>Na Srednji šoli za kemijo, elektrotehniko in računalništvo se zavedamo tega dejstva v kontekstu družbenih razmer...</p>
         </div>
         <div class="box right-box">
-            <p>Dijakom nudimo kvalitetno izobraževanje, pomagamo jim prebroditi težave odraščanja tako, da postanejo dobri delavci in uspešni strokovnjaki. Nekateri med njimi dosegajo visoka priznanja na tekmovanjih različnih strokovnih področij – v državni in mednarodni konkurenci. Aktivno se vključujemo v mednarodne projekte, kar jim omogoča izvajanje interaktivnih dejavnosti, premislek o različnih evropskih temah, njihovo delo ter misli pa se slišijo v evropski prostor.</p>
+            <p>Dijakom nudimo kvalitetno izobraževanje, pomagamo jim prebroditi težave odraščanja tako, da postanejo dobri delavci...</p>
         </div>
+    </div>
 
-        <div id="login-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Prijava</h2>
-                <form>
-                    <label for="username">Uporabniško ime:</label>
-                    <input type="text" id="username" name="username"><br><br>
-                    <label for="password">Geslo:</label>
-                    <input type="password" id="password" name="password"><br><br>
-                    <button type="submit">Potrdi</button>
-                </form>
-                <p>Še nimate računa? <a href="#" id="registerLink">Registrirajte se tukaj</a></p>
-            </div>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Prijava</h2>
+            <form>
+                <label for="username">Uporabniško ime:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Geslo:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit">Potrdi</button>
+            </form>
+            <p>Še nimate računa? <a href="#" id="registerLink">Registrirajte se tukaj</a></p>
         </div>
+    </div>
 
-        <div id="registerModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Registracija</h2>
-                <label for="reg-username">Uporabniško ime:</label>
-                <input type="text" id="reg-username" placeholder="Vnesite vaše uporabniško ime">
-                <label for="email">E-naslov:</label>
-                <input type="text" id="email" placeholder="Vnesite vaš e-naslov">
-                <label for="reg-password">Geslo:</label>
-                <input type="password" id="reg-password" placeholder="Vnesite vaše geslo">
-                <button id="registerSubmit">Registriraj se</button>
-                <p>Že imate račun? <a href="#" id="loginLink">Prijavite se tukaj</a></p>
-            </div>
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Registracija</h2>
+            <label for="reg-username">Uporabniško ime:</label>
+            <input type="text" id="reg-username" placeholder="Vnesite vaše uporabniško ime">
+            <label for="email">E-naslov:</label>
+            <input type="text" id="email" placeholder="Vnesite vaš e-naslov">
+            <label for="reg-password">Geslo:</label>
+            <input type="password" id="reg-password" placeholder="Vnesite vaše geslo">
+            <button id="registerSubmit">Registriraj se</button>
+            <p>Že imate račun? <a href="#" id="loginLink">Prijavite se tukaj</a></p>
         </div>
     </div>
 
