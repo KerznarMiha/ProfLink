@@ -101,45 +101,10 @@ nav ul li a:hover::after {
     text-decoration: underline;
 }
 
-.background-section {
-    background-image: url('student1.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50vh;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-    border: 5px solid #ddd;
-}
-
-.bottom-blue-bar {
-    background-color: #387C7E;
-    height: 60px;
-    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.3);
-    border-top: 3px solid #2c6d6a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-icons {
-    display: flex;
-    gap: 20px;
-}
-
-.social-icon {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #d1d1d1;
-}
-
 .school-description {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
-    gap: 20px;
 }
 
 .box {
@@ -147,83 +112,34 @@ nav ul li a:hover::after {
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    color: #333;
-}
-
-.left-box {
-    text-align: left;
-}
-
-.right-box {
-    text-align: right;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-    background-image: url('ai.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    margin: 15% auto;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
     width: 400px;
     text-align: center;
-    position: relative;
-    font-family: 'Arial', sans-serif;
-    border: 2px solid #387C7E;
+    border-radius: 8px;
 }
 
-.modal-content h2, .modal-content label {
-    text-shadow: 2px 2px 4px #000000;
-    color: white;
-    font-size: 24px;
+.box h2 {
+    margin-bottom: 20px;
 }
 
-.modal-content label {
-    display: inline-block;
-    text-align: left;
-    width: 100%; /* Adjust width as necessary */
-}
-
-.modal-content input {
-    width: calc(100% - 22px); /* Adjust for padding */
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
+.box label {
+    display: block;
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
-.close {
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    text-shadow: 2px 2px 4px #000000;
+.box select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
 
-.close:hover,
-.close:focus {
-    color: #387C7E;
+.box input[type="file"] {
+    margin-bottom: 20px;
 }
 
-.modal-content button {
+.box button {
     background-color: #1a73e8;
     color: white;
     padding: 10px 20px;
@@ -232,61 +148,10 @@ nav ul li a:hover::after {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content button:hover {
+.box button:hover {
     background-color: #387C7E;
-}
-
-input[type="text"], input[type="password"] {
-    border: 2px solid #ddd;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.modal-content a {
-    color: #387C7E;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 2px solid #387C7E;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.modal-content a:hover {
-    background-color: #387C7E;
-    color: white;
-}
-
-.schedule-section {
-    padding: 20px;
-}
-
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.schedule-table th, .schedule-table td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-}
-
-.schedule-table th {
-    background-color: #387C7E;
-    color: white;
-}
-
-.schedule-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.schedule-table tr:hover {
-    background-color: #ddd;
 }
 
 .bottom-blue-bar {
@@ -312,33 +177,4 @@ input[type="text"], input[type="password"] {
 
 .social-icon:hover {
     color: #d1d1d1;
-}
-
-.absence-section {
-    padding: 20px;
-}
-
-.absence-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.absence-table th, .absence-table td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-}
-
-.absence-table th {
-    background-color: #387C7E;
-    color: white;
-}
-
-.absence-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.absence-table tr:hover {
-    background-color: #ddd;
 }
