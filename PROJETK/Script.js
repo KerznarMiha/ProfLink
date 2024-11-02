@@ -139,7 +139,6 @@ var schedules = {
     // Repeat for other classes (R2b, R3a, R3b, R4a, R4b)
 };
 
-// Function to populate the schedule based on selected class
 function loadSchedule(className) {
     var schedule = schedules[className];
     scheduleBody.innerHTML = '';
@@ -163,3 +162,63 @@ classSelect.onchange = function() {
 
 // Initialize with the first class
 loadSchedule("R1a");
+
+// Submission functionality
+var assignmentFileInput = document.getElementById("assignment-file");
+var examFileInput = document.getElementById("exam-file");
+var submitAssignmentButton = document.getElementById("submit-assignment-btn");
+var submitExamButton = document.getElementById("submit-exam-btn");
+var instructionsDisplay = document.getElementById("instructions-display");
+var studentGradeDisplay = document.getElementById("grade-display");
+
+// Function to upload assignment
+function uploadAssignment() {
+    const file = assignmentFileInput.files[0];
+    if (file) {
+        // Handle the file upload (e.g., send to server)
+        alert("Instruction file uploaded successfully.");
+        // Display the uploaded instruction for students
+        displayInstructions(file);
+    } else {
+        alert("Please select a file to upload.");
+    }
+}
+
+// Function to upload exam file
+function uploadExam() {
+    const file = examFileInput.files[0];
+    if (file) {
+        // Handle the file upload (e.g., send to server)
+        alert("Exam file uploaded successfully.");
+    } else {
+        alert("Please select a file to upload.");
+    }
+}
+
+// Function to display the uploaded instructions
+function displayInstructions(file) {
+    // Here you would typically fetch the file data from the server
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        instructionsDisplay.textContent = e.target.result; // Display file content
+        instructionsDisplay.style.display = "block";
+    };
+    reader.readAsText(file);
+}
+
+// Function for teachers to grade assignments
+function submitGrade() {
+    const gradeInput = document.getElementById("student-grade");
+    const gradeValue = parseInt(gradeInput.value);
+
+    if (gradeValue >= 1 && gradeValue <= 5) {
+        document.getElementById("grade-value").textContent = gradeValue;
+        studentGradeDisplay.style.display = "block";
+    } else {
+        alert("Prosimo, vnesite veljavno oceno med 1 in 5.");
+    }
+}
+
+// Add event listeners for upload buttons
+submitAssignmentButton.onclick = uploadAssignment;
+submitExamButton.onclick = uploadExam;

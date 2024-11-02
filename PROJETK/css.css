@@ -178,3 +178,69 @@ nav ul li a:hover::after {
 .social-icon:hover {
     color: #d1d1d1;
 }
+
+.school-description {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px; /* Adjusted padding for better spacing */
+}
+
+.box {
+    background-color: #ffffff; /* Bright white background for the submission box */
+    padding: 30px; /* Increased padding for more spacious feel */
+    border: 1px solid #d1d1d1; /* Softer border color */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    width: 450px; /* Width of the submission box */
+    text-align: center; /* Centered text alignment */
+    border-radius: 12px; /* Rounded corners for a softer look */
+}
+
+.box h2 {
+    margin-bottom: 25px; /* Increased margin for spacing */
+    font-size: 26px; /* Slightly larger heading */
+    color: #387C7E; /* Consistent theme color for headings */
+}
+
+.box label {
+    display: block;
+    margin-bottom: 10px; /* More space below labels */
+    font-size: 16px;
+    color: #444; /* Darker color for better contrast */
+}
+
+.box select,
+.box input[type="file"],
+.box input[type="number"] {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Increased padding for comfort */
+    border-radius: 6px; /* Rounded edges */
+    border: 1px solid #ccc; /* Light border for inputs */
+    font-size: 16px;
+    margin-bottom: 20px; /* Space below each input */
+}
+
+.box button {
+    background-color: #1a73e8; /* Main button color */
+    color: white;
+    padding: 12px 20px; /* Comfortable button size */
+    border: none;
+    border-radius: 6px; /* Rounded button corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.box button:hover {
+    background-color: #387C7E; /* Darker on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.grade-section {
+    margin-top: 25px; /* Space above the grade section */
+}
+
+#grade-display {
+    margin-top: 15px; /* Spacing for the grade display */
+    font-size: 18px; /* Font size for the grade display */
+    color: #333; /* Color for visibility */
+}

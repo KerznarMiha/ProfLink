@@ -33,17 +33,42 @@
     <div class="school-description">
         <div class="box">
             <h2>Oddaja naloge</h2>
-            <label for="subject-select">Izberi predmet:</label>
-            <select id="subject-select">
-                <option value="NUP">NUP</option>
-                <option value="NRP">NRP</option>
-                <option value="SMV">SMV</option>
-            </select>
-            <form>
-                <label for="assignment-file">Naloži datoteko z navodili:</label>
-                <input type="file" id="assignment-file" name="assignment-file" required>
-                <button type="submit">Oddaj nalogo</button>
-            </form>
+
+            <!-- Teacher Upload Section -->
+            <div class="upload-section">
+                <label for="teacher-subject-select">Izberi predmet:</label>
+                <select id="teacher-subject-select">
+                    <option value="NUP">NUP</option>
+                    <option value="NRP">NRP</option>
+                    <option value="SMV">SMV</option>
+                </select>
+                <form>
+                    <label for="teacher-assignment-file">Naloži datoteko z navodili:</label>
+                    <input type="file" id="teacher-assignment-file" name="teacher-assignment-file" required>
+                    <button type="button" id="teacher-upload-btn" onclick="showTeacherSubmitButton()">Naloži</button>
+                    <button type="submit" id="teacher-submit-btn" style="display: none;">Oddaj navodila</button>
+                </form>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <!-- Student Upload Section -->
+            <div class="upload-section">
+                <form>
+                    <label for="student-exam-file">Naloži nalogo:</label>
+                    <input type="file" id="student-exam-file" name="student-exam-file" required>
+                    <button type="button" id="student-upload-btn" onclick="showStudentSubmitButton()">Naloži</button>
+                    <button type="submit" id="student-submit-btn" style="display: none;">Oddaj izpit</button>
+                </form>
+            <div class="grade-section">
+                    <label for="student-grade">Ocena:</label>
+                    <input type="number" id="student-grade" name="student-grade" min="1" max="5" placeholder="Vnesi oceno" required>
+                    <button type="button" id="grade-btn" onclick="submitGrade()">Vpiši oceno</button>
+                    <div id="grade-display" style="display: none;">
+                        Ocena za študenta: <span id="grade-value"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
